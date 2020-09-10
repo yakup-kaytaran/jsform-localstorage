@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"/>
+    <title>Form App</title>
+    <style>
+        .card {
+            width: 100%;
+        }
+
+        .fa-pen-square {
+            color: #41a7ff
+        }
+
+        .fa-trash {
+            color: #ff8888
+        }
+
+        .btn-remove-person,
+        .btn-edit-person {
+            background: transparent;
+            border: 0;
+            outline: 0 !important;
+        }
+
+        tr:nth-child(even) {
+            background: #fff6e9
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="row justify-content-md-center">
+        <div class="card mt-2">
+            <div class="card-header">
+                Kişi Bilgileri
+            </div>
+            <div class="card-body">
+                <form class="form" action="/">
+                    <div class="form-group">
+                        <label>Ad</label>
+                        <input class="form-control" data-form="name" type="text" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Soyad</label>
+                        <input class="form-control" data-form="lastName" type="text" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Doğum tarihi</label>
+                        <input class="form-control" data-form="dateOfBirth" type="date"
+                               id="date-input" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Cinsiyet</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="gender" value="Erkek" required>
+                            <label class="form-check-label">
+                                Erkek
+                            </label>
+                        </div>
+
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="gender" value="Kadın">
+                            <label class="form-check-label">
+                                Kadın
+                            </label>
+                        </div>
+                        <button type="submit" class="btn btn-primary mt-4 btn-submit">Kaydet</button>
+                        <button type="button" class="btn btn-primary mt-4 btn-edit">Güncelle</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row justify-content-md-center mt-5 mb-5">
+        <table class="table">
+            <thead class="thead-dark">
+            <tr>
+                <th scope="col">Ad</th>
+                <th scope="col">Soyad</th>
+                <th scope="col">Doğum Tarihi</th>
+                <th scope="col">Cinsiyet</th>
+                <th scope="col"></th>
+                <th scope="col"></th>
+            </tr>
+            </thead>
+            <tbody class="tbody"></tbody>
+        </table>
+    </div>
+
+</div>
+
+
+</body>
+<script src="main.js"></script>
+</html>
